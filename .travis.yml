@@ -1,0 +1,8 @@
+language: python
+dist: xenial
+
+install:
+  - python --version
+  - pip install -U numpy
+
+script: python -m unittest discover
