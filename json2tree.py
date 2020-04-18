@@ -1,12 +1,14 @@
-""" A python code to generate a tree for JSON data"""
+""" A python code to generate a tree or table for JSON data"""
 from io import StringIO
 
-_branch_extend = "│  "
-_branch_mid    = "├─ "
+__version__ = '1.0.0'
+
+_branch_extend = '│  '
+_branch_mid    = '├─ '
 _branch_last   = '└─ '
 _spacing       = '   '
 
-def _getHierarchy(jsonData, name='', file=None, _prefix="", _last=True):
+def _getHierarchy(jsonData, name='', file=None, _prefix='', _last=True):
     """ Recursively parse json data to print data types """
     # Handle object datatype
     if isinstance(jsonData, dict):
@@ -73,7 +75,7 @@ def json2table(jsonData, header=None, file=None):
         print(table, file=file)
 
 
-def setSymbols(branch_extend="│  ", branch_mid="├─ ", branch_last='└─ '):
+def setSymbols(branch_extend='│  ', branch_mid='├─ ', branch_last='└─ '):
     """ Override symbols for the tree structure """
     global _branch_extend
     global _branch_mid
