@@ -1,0 +1,25 @@
+{
+  "name": "Bob", 
+  "age": 17,
+  "languages": ["English", "French"], 
+  "subjects": 
+  {
+    "Math": 20, 
+    "Science": 30
+  },
+  "ids":
+  [
+    {
+      "name": "school",
+      "number": "A123"
+    },
+    {
+      "name": "lab",
+      "number": "6H3X"
+    },
+    {
+      "name": "bus",
+      "number": "82-BY"
+    }
+  ]
+}
