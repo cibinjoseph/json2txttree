@@ -32,15 +32,15 @@ def _getHierarchy(jsonData, name='', file=None, _prefix="", _last=True):
         # Handle number datatype
         else:
             name = name + ' (number)'
-        print(_prefix, \_branch_last if _last else _branch_mid, \
+        print(_prefix, _branch_last if _last else _branch_mid, \
               name, sep="", file=file)
 
 def json2tree(jsonData, file=None):
     """ Output JSON data as tree to file or return as string """
     if file == None:
-        messageFile = io.String()
+        messageFile = StringIO()
         _getHierarchy(jsonData, file=messageFile)
-        message = message.getValue()
+        message = messageFile.getvalue()
         messageFile.close()
         return message
     else:
