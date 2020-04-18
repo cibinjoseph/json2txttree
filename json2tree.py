@@ -46,6 +46,33 @@ def json2tree(jsonData, file=None):
     else:
         _getHierarchy(jsonData, file=file)
 
+def json2table(jsonData, header=None, file=None):
+    """ Output JSON data as a Markkdown table to file or return as string """
+    # Get tree structure
+    treeFile = StringIO()
+    _getHierarchy(jsonData, file=treeFile)
+    tree = treeFile.getvalue()
+    treeFile.close()
+    # Convert to table
+    table = ''
+    for line in tree.splitlines():
+        items = line.split('"')
+        if len(items) > 1:
+            field = '`' + items[1] + '`'
+            datatype = items[2].replace('(','`')
+            datatype = datatype.replace(')','`')
+            table += '| ' + field + ' | ' + datatype + ' | - |\n'
+    # Add headers
+    if header == None:
+        header = '| Field | Data type | Details |\n' + \
+                 '| ----- | --------- | ------- |\n'
+    table = header + table
+    if file == None:
+        return table
+    else:
+        print(table, file=file)
+
+
 def setSymbols(branch_extend="│  ", branch_mid="├─ ", branch_last='└─ '):
     """ Override symbols for the tree structure """
     global _branch_extend
