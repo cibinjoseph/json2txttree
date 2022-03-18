@@ -37,7 +37,7 @@ def _getHierarchy(jsonData, name='', file=None, _prefix='', _last=True):
         print(_prefix, _branch_last if _last else _branch_mid, \
               name, sep="", file=file)
 
-def json2tree(jsonData, file=None):
+def json2txttree(jsonData, file=None):
     """ Output JSON data as tree to file or return as string """
     if file == None:
         messageFile = StringIO()
@@ -48,7 +48,7 @@ def json2tree(jsonData, file=None):
     else:
         _getHierarchy(jsonData, file=file)
 
-def json2table(jsonData, header=None, file=None):
+def json2txttable(jsonData, header=None, file=None):
     """ Output JSON data as a Markkdown table to file or return as string """
     # Get tree structure
     treeFile = StringIO()

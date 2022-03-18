@@ -1,12 +1,12 @@
 import unittest
 import json
-import json2tree as j2t
+import json2txttree as j2t
 
 class SimpleTest(unittest.TestCase):
-    def test_json2tree(self):
+    def test_json2txttree(self):
         with open('sample.json', 'r') as jsonfile:
             data = json.load(jsonfile)
-            tree = j2t.json2tree(data)
+            tree = j2t.json2txttree(data)
         tree_exp = '└─  (object)\n' + \
                    '   ├─ "name" (string)\n' + \
                    '   ├─ "age" (number)\n' + \
@@ -21,10 +21,10 @@ class SimpleTest(unittest.TestCase):
                    '         └─ "number" (string)\n'
         self.assertEqual(tree_exp, tree)
 
-    def test_json2table(self):
+    def test_json2txttable(self):
         with open('sample.json', 'r') as jsonfile:
             data = json.load(jsonfile)
-            table = j2t.json2table(data)
+            table = j2t.json2txttable(data)
         table_exp = '| Field | Data type | Details |\n' + \
                 '| ----- | --------- | ------- |\n' + \
                 '| `name` |  `string` | - |\n' + \

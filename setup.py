@@ -2,12 +2,12 @@ from setuptools import setup
 import c81utils
 
 
-setup(name='json2tree',
+setup(name='json2txttree',
       version=c81utils.__version__,
       author='Cibin Joseph',
       author_email='cibinjoseph92@gmail.com',
-      url='http://pypi.python.org/pypi/json2tree',
-      description='Library for pretty printing json data',
+      url='http://pypi.python.org/pypi/json2txttree',
+      description='Library for pretty printing json data to txt files',
       long_description='\n'.join([
           open('README.rst', 'r').read(),
           open('CHANGES.rst', 'r').read()]),
@@ -25,6 +25,6 @@ setup(name='json2tree',
       include_package_data=True,
       zip_safe=True,
       install_requires=[],
-      py_modules=['json2tree'],
-      test_suite='test_json2tree.main',
+      py_modules=['json2txttree'],
+      test_suite='test_json2txttree.main',
      )
