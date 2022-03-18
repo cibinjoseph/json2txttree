@@ -1,10 +1,3 @@
-.. image:: https://img-shields.io/pypi/v/json2txttree.svg
-   :target: https://pypi.org/project/json2txttree/
-   :alt: json2txttree on PyPI
-
-.. image:: https://travis-ci.com/cibinjoseph/json2txttree.svg?branch=master
-   :target: https://travis-ci.com/cibinjoseph/json2txttree
-
 json2txttree
 ==============
 Python code that converts JSON data to tree-like output for documentation or pretty printing
@@ -37,3 +30,6 @@ Usage
              ├─ "name" (string)
              └─ "number" (string)
 
+Installation
+--------------
+Use pip to install this package.
