@@ -1,9 +1,9 @@
 from setuptools import setup
-import c81utils
+import json2txttree
 
 
 setup(name='json2txttree',
-      version=c81utils.__version__,
+      version=json2txttree.__version__,
       author='Cibin Joseph',
       author_email='cibinjoseph92@gmail.com',
       url='http://pypi.python.org/pypi/json2txttree',
