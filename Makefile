@@ -16,4 +16,4 @@ test:
 	python3 -m unittest discover
 
 clean:
-	rm -rf build c81utils.egg-info __pycache__ dist
+	rm -rf build json2txttree.egg-info __pycache__ dist
