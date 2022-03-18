@@ -6,7 +6,7 @@
    :target: https://travis-ci.com/cibinjoseph/json2txttree
 
 json2txttree
-==========
+==============
 Python code that converts JSON data to tree-like output for documentation or pretty printing
 
 Usage
