@@ -1,7 +1,7 @@
 """ A python code to generate a tree or table for JSON data"""
 from io import StringIO
 
-__version__ = '1.0.0'
+__version__ = '0.1.0'
 
 _branch_extend = '│  '
 _branch_mid    = '├─ '
