@@ -26,7 +26,8 @@ def _getHierarchy(jsonData, name='', file=None, _prefix='', _last=True):
         print(_prefix, _branch_last if _last else _branch_mid, \
               name, sep="", file=file)
         _prefix += _spacing if _last else _branch_extend
-        _getHierarchy(jsonData[0], '', file, _prefix, _last=True)
+        if jsonData:
+            _getHierarchy(jsonData[0], '', file, _prefix, _last=True)
     else:
         # Handle string datatype
         if isinstance(jsonData, str):
